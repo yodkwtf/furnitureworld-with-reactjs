@@ -11,18 +11,21 @@ const AboutPage = () => {
         <img src={aboutImg} alt="about-image" />
         <article>
           <div className="title">
-            <h2>our story</h2>
+            <h2>about us</h2>
             <div className="underline"></div>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            temporibus dignissimos accusantium repellat quidem fugit corrupti
-            dolor numquam molestiae, nobis laudantium architecto eum, labore
-            soluta reprehenderit aspernatur qui laborum fuga quam eveniet
-            magnam. Ad libero officia accusamus illo dolor sunt vero
-            reprehenderit laboriosam, eum eos obcaecati placeat distinctio,
-            impedit iure animi incidunt asperiores rerum alias iste quo corrupti
-            atque qui velit aperiam? Quos, magni saepe?
+            Furniture World will leverage the core strengths of the group in
+            understanding diverse consumer & trade behaviour, retail
+            distribution network, brand equity, global sourcing & cost effective
+            supply chain management, which are critical success factors in this
+            sector. The core vision of Furniture World is "to be the first
+            choice partner of customers aspiring for Value for Style home
+            interior solutions". A chain of large retail format stores under the
+            brand name "Furniture World- Home With Soul" is operating across the
+            country. Furniture World Stores showcase over 20000+ world-class
+            contemporary products in Home Furniture, Soft Furnishings, Home
+            Decor & Accessories & Wall Fashion.
           </p>
         </article>
       </Wrapper>
@@ -32,6 +35,7 @@ const AboutPage = () => {
 
 const Wrapper = styled.section`
   display: grid;
+  place-items: center;
   gap: 4rem;
   img {
     width: 100%;
@@ -46,6 +50,7 @@ const Wrapper = styled.section`
     margin: 0 auto;
     margin-top: 2rem;
     color: var(--clr-grey-5);
+    text-transform: normal;
   }
   .title {
     text-align: left;

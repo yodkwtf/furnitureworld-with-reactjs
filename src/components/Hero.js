@@ -9,12 +9,14 @@ const Hero = () => {
     <Wrapper className="section-center">
       <article className="content">
         <h1>
-          design your <br /> comfort zone
+          explore our <br /> furniture range
         </h1>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis,
-          tenetur. In eveniet suscipit excepturi, minus alias saepe a eligendi
-          reprehenderit.
+          Furniture is one such part of our homes that cannot be missed out in
+          any of the cases. It makes our home aesthetically valuable by giving
+          us all the comfort and relaxation that we desire. Certainly, one
+          cannot deny the fact that a home is not complete without the right set
+          of furniture.
         </p>
         <Link to="/products" className="btn hero-btn">
           shop now

@@ -8,13 +8,13 @@ const Services = () => {
       <div className="section-center">
         <article className="header">
           <h3>
-            custom furniture <br />
-            built only for you
+            services built
+            <br />
+            for you
           </h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quasi
-            architecto ex labore aliquam eveniet praesentium, ut possimus
-            laboriosam molestiae?
+            Buy Furniture Online At Furniture World - India's Favourite
+            Destination For All Things Home!
           </p>
         </article>
         <div className="services-center">

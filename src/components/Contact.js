@@ -8,9 +8,8 @@ const Contact = () => {
         <h3>Join our newsletter and get 20% off</h3>
         <div className="content">
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Repudiandae rerum numquam expedita hic, atque eos deleniti
-            dignissimos illo. Recusandae, sed!
+            Leave your email below and get regular updates about our products
+            and discount options. You can unsubscribe anytime you want.
           </p>
           <form
             action="https://formspree.io/f/xrgovpoj"
@@ -54,7 +53,8 @@ const Wrapper = styled.section`
   .submit-btn {
     font-size: 1rem;
     padding: 0.5rem 1rem;
-    border: 2px solid var(--clr-black);
+    border: 2px solid var(--clr-primary-5);
+    outline: none;
   }
   .form-input {
     border-right: none;
@@ -76,10 +76,10 @@ const Wrapper = styled.section`
     letter-spacing: var(--spacing);
     cursor: pointer;
     transition: var(--transition);
-    color: var(--clr-black);
+    color: var(--clr-white);
   }
   .submit-btn:hover {
-    color: var(--clr-white);
+    opacity: 0.8;
   }
   @media (min-width: 992px) {
     .content {

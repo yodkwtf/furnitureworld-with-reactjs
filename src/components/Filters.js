@@ -32,121 +32,146 @@ const Filters = () => {
     <Wrapper>
       <div className="content">
         <form onSubmit={(e) => e.preventDefault()}>
-          {/* search input */}
-          <div className="form-control">
-            <input
-              type="text"
-              name="text"
-              placeholder="search"
-              className="search-input"
-              value={text}
-              onChange={updateFilters}
-            />
-          </div>
-          {/* end of search input */}
-
-          {/* categories */}
-          <div className="form-control">
-            <h5>category</h5>
-            <div>
-              {categories.map((cur, index) => (
-                <button
-                  key={index}
-                  onClick={updateFilters}
-                  name="category"
-                  className={`${category === cur.toLowerCase() && 'active'}`}
-                >
-                  {cur}
-                </button>
-              ))}
+          <div>
+            {/* categories */}
+            <div className="form-control small-sc">
+              <h5>category</h5>
+              <div>
+                {categories.map((cur, index) => (
+                  <button
+                    key={index}
+                    onClick={updateFilters}
+                    name="category"
+                    className={`${category === cur.toLowerCase() && 'active'}`}
+                  >
+                    {cur}
+                  </button>
+                ))}
+              </div>
             </div>
+            {/* end of categories */}
+            <button className="clear-btn small-sc" onClick={clearFilters}>
+              clear filters
+            </button>
           </div>
-          {/* end of categories */}
 
-          {/* companies */}
-          <div className="form-control">
-            <h5>company</h5>
-            <select
-              name="company"
-              value={company}
-              onChange={updateFilters}
-              className="company"
-            >
-              {companies.map((company, index) => (
-                <option key={index} value={company}>
-                  {company}
-                </option>
-              ))}
-            </select>
-          </div>
-          {/* end of companies */}
+          <div>
+            {/* search input */}
+            <div className="form-control">
+              <input
+                type="text"
+                name="text"
+                placeholder="search"
+                className="search-input"
+                value={text}
+                onChange={updateFilters}
+              />
+            </div>
+            {/* end of search input */}
 
-          {/* colors */}
-          <div className="form-control">
-            <h5>colors</h5>
-            <div className="colors">
-              {colors.map((cur, index) => {
-                if (cur === 'all') {
+            {/* categories */}
+            <div className="form-control big-sc">
+              <h5>category</h5>
+              <div>
+                {categories.map((cur, index) => (
+                  <button
+                    key={index}
+                    onClick={updateFilters}
+                    name="category"
+                    className={`${category === cur.toLowerCase() && 'active'}`}
+                  >
+                    {cur}
+                  </button>
+                ))}
+              </div>
+            </div>
+            {/* end of categories */}
+
+            {/* companies */}
+            <div className="form-control">
+              <h5>company</h5>
+              <select
+                name="company"
+                value={company}
+                onChange={updateFilters}
+                className="company"
+              >
+                {companies.map((company, index) => (
+                  <option key={index} value={company}>
+                    {company}
+                  </option>
+                ))}
+              </select>
+            </div>
+            {/* end of companies */}
+
+            {/* colors */}
+            <div className="form-control">
+              <h5>colors</h5>
+              <div className="colors">
+                {colors.map((cur, index) => {
+                  if (cur === 'all') {
+                    return (
+                      <button
+                        key={index}
+                        name="color"
+                        className={`all-btn ${color === 'all' && 'active'}`}
+                        data-color="all"
+                        onClick={updateFilters}
+                      >
+                        all
+                      </button>
+                    );
+                  }
                   return (
                     <button
                       key={index}
                       name="color"
-                      className={`all-btn ${color === 'all' && 'active'}`}
-                      data-color="all"
+                      style={{ background: cur }}
+                      className={`color-btn ${color === cur && 'active'}`}
+                      data-color={cur}
                       onClick={updateFilters}
                     >
-                      all
+                      {color === cur && <FaCheck />}
                     </button>
                   );
-                }
-                return (
-                  <button
-                    key={index}
-                    name="color"
-                    style={{ background: cur }}
-                    className={`color-btn ${color === cur && 'active'}`}
-                    data-color={cur}
-                    onClick={updateFilters}
-                  >
-                    {color === cur && <FaCheck />}
-                  </button>
-                );
-              })}
+                })}
+              </div>
             </div>
-          </div>
-          {/* end of colors */}
+            {/* end of colors */}
 
-          {/* price */}
-          <div className="form-control">
-            <h5>price</h5>
-            <p className="price">{formatPrice(price)}</p>
-            <input
-              type="range"
-              name="price"
-              min={min_price}
-              max={max_price}
-              value={price}
-              onChange={updateFilters}
-            />
-          </div>
-          {/* end of price */}
+            {/* price */}
+            <div className="form-control">
+              <h5>price</h5>
+              <p className="price">{formatPrice(price)}</p>
+              <input
+                type="range"
+                name="price"
+                min={min_price}
+                max={max_price}
+                value={price}
+                onChange={updateFilters}
+              />
+            </div>
+            {/* end of price */}
 
-          {/* shipping */}
-          <div className="form-control shipping">
-            <label htmlFor="shipping">free shipping</label>
-            <input
-              type="checkbox"
-              name="shipping"
-              id="shipping"
-              onChange={updateFilters}
-              checked={shipping}
-            />
+            {/* shipping */}
+            <div className="form-control shipping">
+              <label htmlFor="shipping">free shipping</label>
+              <input
+                type="checkbox"
+                name="shipping"
+                id="shipping"
+                onChange={updateFilters}
+                checked={shipping}
+              />
+            </div>
+            {/* end of shipping */}
+            <button className="clear-btn big-sc" onClick={clearFilters}>
+              clear filters
+            </button>
           </div>
-          {/* end of shipping */}
         </form>
-        <button className="clear-btn" onClick={clearFilters}>
-          clear filters
-        </button>
       </div>
     </Wrapper>
   );
@@ -157,6 +182,30 @@ const Wrapper = styled.section`
     margin-bottom: 1.25rem;
     h5 {
       margin-bottom: 0.5rem;
+    }
+  }
+
+  .content form {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .small-sc {
+    display: none;
+  }
+  .big-sc {
+    display: block;
+  }
+  @media (max-width: 768px) {
+    .content form {
+      width: 100%;
+      grid-template-columns: 40% 1fr;
+      column-gap: 2rem;
+    }
+    .small-sc {
+      display: block;
+    }
+    .big-sc {
+      display: none;
     }
   }
   .search-input {

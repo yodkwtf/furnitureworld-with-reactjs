@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logo.svg';
+import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 import { useProductsContext } from '../context/products_context';
 import { FaTimes } from 'react-icons/fa';
@@ -50,6 +50,7 @@ const SidebarContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
+    margin-top: -4rem;
   }
   .close-btn {
     font-size: 2rem;
@@ -66,10 +67,11 @@ const SidebarContainer = styled.div`
   }
   .logo {
     justify-self: center;
-    height: 45px;
+    height: 200px;
   }
   .links {
     margin-bottom: 2rem;
+    margin-top: -4rem;
   }
   .links a {
     display: block;

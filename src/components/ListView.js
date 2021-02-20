@@ -33,7 +33,6 @@ const Wrapper = styled.section`
   img {
     width: 100%;
     display: block;
-    width: 300px;
     height: 200px;
     object-fit: cover;
     border-radius: var(--radius);
@@ -60,6 +59,9 @@ const Wrapper = styled.section`
       grid-template-columns: auto 1fr;
       column-gap: 2rem;
       align-items: center;
+    }
+    img {
+      width: 300px;
     }
   }
 `;
