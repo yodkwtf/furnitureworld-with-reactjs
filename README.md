@@ -1,6 +1,6 @@
 # Furniture World
 
-An E-Commerce website created with reactJS using modern rect hooks and react router dom. The website is for a furniture company called Furniture World. This is an advanced project that handles login functionality using services of Auth0 and payment is handled using by stripe API.
+An E-Commerce website for a furniture company built with reactjs and styled-components. The products are fetched via an external API and they can be filtered or sorted in a no. of ways. I set up the filter functionality using context API and the useReducer hook in react. The site also has a lot of other great features like login/logout provided by auth0, payment handling by stripe & netlify functions, and form handling via formspree.
 
 ### Live Preview
 
